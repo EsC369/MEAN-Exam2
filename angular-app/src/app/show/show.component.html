@@ -1,0 +1,12 @@
+<div id='wrapper'>
+  <a href='/'>Home</a>
+  <div *ngIf='product'>
+      <h1>Product Details:</h1>
+      <h3>ID: {{ product.name }}</h3>
+      <hr>
+      <h3>Product Quantity: <span>{{ product.qTY }}</span></h3>
+      <h3>Price: <span>{{ product.price }}</span></h3>
+      <hr>
+      <p align="left"> <button (click)='onDestroy(product)'>Delete</button> </p>
+  </div>
+</div>

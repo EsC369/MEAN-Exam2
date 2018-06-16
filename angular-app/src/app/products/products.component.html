@@ -1,0 +1,27 @@
+<h3>Product List</h3>
+
+<div *ngFor='let error of errors'>
+        <p style='color: red;'>{{ error }}</p>
+</div>
+
+<a href='/products/new'>Add A New product</a>
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>QTY</td>
+            <td>Price</td>
+            <td>Actions</td>
+        </tr> 
+    </thead>
+    <tbody *ngFor='let product of products'>
+        <tr>
+            <td>{{ product._id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.qTY }}</td>
+            <td>{{ product.price }}</td>
+            <td><button (click)='goEditProduct(product)'>Edit</button> | <button (click)='goShowProduct(product)'>Details</button></td>
+        </tr>
+    </tbody>
+</table>

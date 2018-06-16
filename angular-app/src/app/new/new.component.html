@@ -1,0 +1,23 @@
+<h3>New Product</h3>
+
+<div *ngFor='let error of errors'>
+    <p style='color: red;'>{{ error }}</p>
+</div>
+
+<div class='create_info'>
+  <form (submit)='onCreate()'>
+
+    <p>Product Name:</p>
+    <input type='text' name='name' [(ngModel)]='productInfo.name'>
+
+    <p>Product Quantity:</p>
+    <input type='number' name='qTY' [(ngModel)]='productInfo.qTY'>
+
+    <p>Product Price:</p>
+    <input type='number' name='price' [(ngModel)]='productInfo.price'>
+
+    <br>
+    <br>
+    <input type='submit' value='Add Product'> | <a href='/'><button type='button'>Cancel</button></a>
+  </form>
+</div>

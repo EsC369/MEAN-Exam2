@@ -1,0 +1,26 @@
+<h3>Update product</h3>
+
+<div *ngFor='let error of errors'>
+    <p style='color: red;'>{{ error }}</p>
+</div>
+
+<div class='edit_info'>
+  <div *ngIf='product'>
+    <form (submit)='onEdit(product)'>
+      <p>Product Name:</p>
+      <input type='text' name='name' [(ngModel)]='editProduct.name'>
+
+      <p>Product Quantity:</p>
+      <input type='number' name='qTY' [(ngModel)]='editProduct.qTY'>
+
+      <p>Product Price:</p>
+      <input type='number' name='price' [(ngModel)]='editProduct.price'>
+
+      <br>
+      <br>
+      <input type='submit' value='Update'> | <a href='/products/'><button type='button'>Cancel</button></a>
+      <!-- <a href='/products/{{product._id}}'><button type='button'>Cancel</button></a> -->
+    </form>
+    
+  </div>
+</div>

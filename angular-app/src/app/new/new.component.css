@@ -1,0 +1,16 @@
+.create_info {
+  border: 2px solid black;
+  width: 400px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.skills {
+  padding-left: 30px;
+}
+p {
+  font-weight: bold;
+  color: rgb(122, 47, 47);
+}
+h3 {
+  color: rgb(173, 134, 25);
+}
